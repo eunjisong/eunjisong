@@ -1,40 +1,48 @@
 //db
-const db = require('./models')
+const db = require('./models');
+
 //models
-const Photo = db.model('photo')
-const Bedroom = db.model('bedroom')
-const Livingroom = db.model('livingroom')
-const Product = db.model('product')
-//bluebird
-const Promise = require('bluebird');
+const Work = db.model('work');
+const Artwork = db.model('artwork');
+const Coding = db.model('coding');
+
+const Promise = require('bluebird')
+
+const allArtworks = [{ imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork1.jpg'},
+                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork2.jpg'},
+                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork3.jpg'},
+                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork4.jpg'},
+                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork5.jpg'}
+                    ];
+
+const allCoding = [{ url: 'www.chenglinphoto.com',
+                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/chenglinphoto.jpg',
+                    description: 'Cheng\'s portfoilo!' },
+                    { url: 'www.eunjisong.com',
+                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/eunjisong.jpg',
+                    description: 'Eunji\'s portfoli!' },
+                    { url: 'www.groupwork.com',
+                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/groupwork.jpg',
+                    description: 'Capstone at Grace Hopper', },
+                    { url: 'www.hackatone8933.com',
+                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/hackatone8933.jpg',
+                    description: 'Hackatone at Grace Hopper'
+                    }];
 
 
-const allphotos = [
-  {type: 'kitchen', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc1.jpg'},
-  {type: 'livingroom', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc3.jpg'},
-  {type: 'kitchen', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc2.jpg'},
-  {type: 'bathroom', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc4.jpg'},
-  {type: 'bedroom', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc5.jpg'},
-  {type: 'bedroom', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc6.jpg'},
-  {type: 'livingroom', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc7.jpg'},
-  {type: 'kitchen', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/bc8.jpg'},
-  {type: 'office', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/okl1.jpg'},
-  {type: 'office', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/okl2.jpg'},
-  {type: 'office', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/okl3.jpg'},
-  {type: 'office', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/okl4.jpg'},
-  {type: 'office', url: '/Users/eunjisong/Documents/personal work/cheng/public/photos/okl5.jpg'}
-]
-
-const seed = () => {
-  Promise.map(allphotos, photo => {
-    return Photo.create(photo)
-  })
-}
 
 db.sync()
   .then( () => {
-    console.log('Seeding database...')
-    return seed();
+    console.log('Seeding artwork...')
+    Promise.map(allArtworks, artwork => {
+      return Artwork.create(artwork);
+    })
+  })
+  .then( () => {
+    console.log('Seeding websites db...')
+    Promise.map(allCoding, aSite => {
+      return Coding.create(aSite)
+    })
   })
   .then( () => {
     console.log('seeded successfully!!')

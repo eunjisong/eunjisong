@@ -1,11 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../index');
 
-const Bedroom = db.define('bedroom', {
-  type: {
-    type: Sequelize.STRING
-  },
-  url: {
+module.exports = db.define('artwork', {
+  imageUrl: {
     type: Sequelize.STRING,
     allowNull: false
   },
@@ -13,5 +10,3 @@ const Bedroom = db.define('bedroom', {
     type: Sequelize.TEXT
   }
 })
-
-module.exports = Bedroom
