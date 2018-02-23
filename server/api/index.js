@@ -1,8 +1,7 @@
 const apiRouter = require('express').Router();
 
-apiRouter.use('/allphotos', require('./allPhotos'))
-apiRouter.use('/bedrooms', require('./bedRooms'))
-apiRouter.use('/livingrooms', require('./livingRooms'))
-apiRouter.use('/products', require('./products'))
+//apiRouter.use('/', require('./allwork'))
+apiRouter.use('/artwork', require('./artwork'))
+apiRouter.use('/coding', require('./coding'))
 
 module.exports = apiRouter

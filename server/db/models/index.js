@@ -2,10 +2,8 @@
 const db = require('../index');
 const Artwork = require('./artwork');
 const Coding = require('./coding');
-const Work = require('./allworks');
 
-Artwork.belongsTo(Work)
-Coding.belongsTo(Work)
+
 
 module.exports = db;
 

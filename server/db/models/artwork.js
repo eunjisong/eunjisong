@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../index');
 
-module.exports = db.define('artwork', {
+const Artwork = db.define('artwork', {
   imageUrl: {
     type: Sequelize.STRING,
     allowNull: false
@@ -10,3 +10,5 @@ module.exports = db.define('artwork', {
     type: Sequelize.TEXT
   }
 })
+
+module.exports = Artwork

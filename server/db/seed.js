@@ -1,8 +1,9 @@
 //db
 const db = require('./models');
+const path = require('path');
+
 
 //models
-const Work = db.model('work');
 const Artwork = db.model('artwork');
 const Coding = db.model('coding');
 
@@ -14,6 +15,7 @@ const allArtworks = [{ imageUrl: '/Users/eunjisong/Documents/personal work/eunji
                      { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork4.jpg'},
                      { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork5.jpg'}
                     ];
+//console.log(path.join(__dirname + '/public/images')) you can add path in this way
 
 const allCoding = [{ url: 'www.chenglinphoto.com',
                     imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/chenglinphoto.jpg',
