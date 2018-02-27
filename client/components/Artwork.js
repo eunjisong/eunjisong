@@ -13,7 +13,7 @@ const Artwork = (props) => {
         {
           props.artwork && props.artwork.map(art => {
             return <div key={art.id}>
-              <Link to={`/artwork/${art.id}`}><img src='http://dogsaholic.com/wp-content/uploads/2015/05/Puppy-exercise-and-play-with-ball-810x487.jpg' width="200px" /></Link></div>
+              <Link to={`/artwork/${art.id}`}><img src={art.imageUrl} width="300px" /></Link></div>
           })
         }
 

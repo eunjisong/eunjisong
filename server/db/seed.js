@@ -9,26 +9,28 @@ const Coding = db.model('coding');
 
 const Promise = require('bluebird')
 
-const allArtworks = [{ imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork1.jpg'},
-                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork2.jpg'},
-                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork3.jpg'},
-                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork4.jpg'},
-                     { imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/artwork5.jpg'}
+const allArtworks = [
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/730624_9ghairugdvi0adq9cwhwdbafy.jpg',description: 'Digital Painting' },
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/large_730624_hoojpqdhxu3qokywzter0avjj.png', description: 'Marilyn'},
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/large_730624_vmofuouteyioo6im5ybkdlnol.jpg', description: 'Pen Drawing'},
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/large_730624_k6xucdkxvhpslkgcprxsw9bkb.jpg', description: 'Catching Van Gogh'},
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/large_730624_ltg897n_aqhjh7vdiqkegtlvc.jpg', description: 'Octopus Lady'},
+                     { imageUrl: 'http://s3images.coroflot.com/user_files/individual_files/large_730624_v3fadvposfgnwdatmfchwnchw.jpg', description: 'My Don Quixot'}
                     ];
-//console.log(path.join(__dirname + '/public/images')) you can add path in this way
+
 
 const allCoding = [{ url: 'www.chenglinphoto.com',
-                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/chenglinphoto.jpg',
+                    imageUrl: 'http://suzumori.net/architecture/wp-content/uploads/2017/01/343-6th-Ave-2_2-R-1800x1186.jpg',
                     description: 'Cheng\'s portfoilo!' },
-                    { url: 'www.eunjisong.com',
-                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/eunjisong.jpg',
-                    description: 'Eunji\'s portfoli!' },
+                    { url: 'www.kateyip.com',
+                    imageUrl: 'http://suzumori.net/architecture/wp-content/uploads/2017/01/343-6th-Ave-2_17-R-1800x1200.jpg',
+                    description: 'Kate\'s portfolio!' },
                     { url: 'www.groupwork.com',
-                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/groupwork.jpg',
+                    imageUrl: 'http://suzumori.net/architecture/wp-content/uploads/2017/01/343-6th-Ave-2_24-R-1800x1047.jpg',
                     description: 'Capstone at Grace Hopper', },
-                    { url: 'www.hackatone8933.com',
-                    imageUrl: '/Users/eunjisong/Documents/personal work/eunji/public/images/hackatone8933.jpg',
-                    description: 'Hackatone at Grace Hopper'
+                    { url: 'www.timewatcher.com',
+                    imageUrl: 'http://suzumori.net/architecture/wp-content/uploads/2017/01/315-HUDSON-OKL-OFFICE_134-R-1800x1200.jpg',
+                    description: 'Stackathon at Grace Hopper'
                     }];
 
 

@@ -13,7 +13,7 @@ const Coding = (props) => {
           props.coding && props.coding.map(site => {
             return <div key={site.id}>
               <Link to={`/coding/${site.id}`}>
-                <img src='https://2static.fjcdn.com/large/pictures/c3/1e/c31e9d_5929666.jpg' width="200px" />
+                <img src={site.imageUrl} width="300px" />
               </Link></div>
           })
         }

@@ -8,8 +8,8 @@ const SingleArt = (props) => {
       {
         props.artwork &&
         <div>
-          <h2>{props.artwork.id}</h2>
-          <img src="http://dogsaholic.com/wp-content/uploads/2015/05/Puppy-exercise-and-play-with-ball-810x487.jpg" />
+          <h2>{props.artwork.description}</h2>
+          <img src={props.artwork.imageUrl} width='500px'/>
         </div>
       }
 
