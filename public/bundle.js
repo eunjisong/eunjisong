@@ -4336,11 +4336,11 @@ var Artwork = function Artwork(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'all-arts' },
+      { className: 'itemBox' },
       props.artwork && props.artwork.map(function (art) {
         return _react2.default.createElement(
           'div',
-          { key: art.id },
+          { className: 'item', key: art.id },
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/artwork/' + art.id },
@@ -4398,11 +4398,11 @@ var Coding = function Coding(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'all-coding' },
+      { className: 'itemBox' },
       props.coding && props.coding.map(function (site) {
         return _react2.default.createElement(
           'div',
-          { key: site.id },
+          { className: 'item', key: site.id },
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/coding/' + site.id },
@@ -27587,7 +27587,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   return _react2.default.createElement(
     'nav',
-    { className: 'navbar navbar-default' },
+    { className: 'navbar navbar-inverse navbar-fixed-top' },
     _react2.default.createElement(
       'div',
       { className: 'container-fluid' },
@@ -27608,8 +27608,8 @@ exports.default = function (props) {
           null,
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/artwork' },
-            'Artwork'
+            { to: '/coding' },
+            'PROJECT'
           )
         ),
         _react2.default.createElement(
@@ -27617,8 +27617,8 @@ exports.default = function (props) {
           null,
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/coding' },
-            'Coding'
+            { to: '/artwork' },
+            'ART'
           )
         ),
         _react2.default.createElement(
@@ -27627,7 +27627,7 @@ exports.default = function (props) {
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/about' },
-            'About'
+            'CONTACT'
           )
         )
       )
@@ -27675,10 +27675,13 @@ var Main = function Main(props) {
       _react2.default.createElement(
         'h3',
         null,
-        'ALL WORK'
+        'Hello, My name is Eunji Song.'
       ),
-      _react2.default.createElement(_Artwork2.default, { artwork: props.artwork }),
-      _react2.default.createElement(_Coding2.default, { coding: props.coding })
+      _react2.default.createElement(
+        'h3',
+        null,
+        'I am a Software Engineer living in New York, NY'
+      )
     )
   );
 };
@@ -27704,29 +27707,118 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (props) {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "h2",
-      null,
-      "About"
-    ),
-    _react2.default.createElement(
-      "h3",
-      null,
-      "Hello World!"
-    ),
-    _react2.default.createElement("img", { src: "https://avatars0.githubusercontent.com/u/32075932?s=400&u=4e8cb2bb8fcc0293dace5e9efeeb829db64a54a3&v=4" })
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_Component) {
+  _inherits(About, _Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    return _this;
+  }
+
+  _createClass(About, [{
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      this.setState({});
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "h2",
+          null,
+          "About"
+        ),
+        _react2.default.createElement(
+          "h3",
+          null,
+          "Hello World!"
+        ),
+        _react2.default.createElement(
+          "form",
+          { className: "inputContainer" },
+          _react2.default.createElement(
+            "div",
+            { className: "input" },
+            _react2.default.createElement(
+              "label",
+              null,
+              "name:"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("input", { type: "text", name: "name" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "input" },
+            _react2.default.createElement(
+              "label",
+              null,
+              "email:"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("input", { type: "text", name: "email" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "input" },
+            _react2.default.createElement(
+              "label",
+              null,
+              "company:"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("input", { type: "text", name: "company" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "input" },
+            _react2.default.createElement(
+              "label",
+              null,
+              "message:"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("textarea", { type: "text", name: "message" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "input" },
+            _react2.default.createElement(
+              "button",
+              { onSubmit: this.handleSubmit },
+              "submit"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react.Component);
+
+exports.default = About;
 
 /***/ }),
 /* 149 */

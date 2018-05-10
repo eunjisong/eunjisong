@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default (props) => {
   return (
-    <nav className="navbar navbar-default">
+    <nav className="navbar navbar-inverse navbar-fixed-top">
       <div className="container-fluid">
 
         <div className="navbar-header">
@@ -11,9 +11,9 @@ export default (props) => {
         </div>
 
         <ul className="nav navbar-nav">
-          <li><Link to='/artwork'>Artwork</Link></li>
-          <li><Link to='/coding'>Coding</Link></li>
-          <li><Link to='/about' >About</Link></li>
+          <li><Link to='/coding'>PROJECT</Link></li>
+          <li><Link to='/artwork'>ART</Link></li>
+          <li><Link to='/about' >CONTACT</Link></li>
         </ul>
 
       </div>

@@ -8,11 +8,11 @@ const Artwork = (props) => {
     <div>
       <div><h2>Artwork</h2></div>
 
-      <div className='all-arts'>
+      <div className='itemBox'>
 
         {
           props.artwork && props.artwork.map(art => {
-            return <div key={art.id}>
+            return <div className="item" key={art.id}>
               <Link to={`/artwork/${art.id}`}><img src={art.imageUrl} width="300px" /></Link></div>
           })
         }

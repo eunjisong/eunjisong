@@ -7,11 +7,11 @@ const Coding = (props) => {
     <div>
       <div><h2>Coding</h2></div>
 
-      <div className='all-coding'>
+      <div className='itemBox'>
 
         {
           props.coding && props.coding.map(site => {
-            return <div key={site.id}>
+            return <div className="item" key={site.id}>
               <Link to={`/coding/${site.id}`}>
                 <img src={site.imageUrl} width="300px" />
               </Link></div>

@@ -9,10 +9,14 @@ const Main = (props) => {
 
   return (
     <div>
-      <div>
+      {/* <div>
       <h3>ALL WORK</h3>
       <Artwork artwork={props.artwork} />
       <Coding coding={props.coding} />
+      </div> */}
+      <div>
+        <h3>Hello, My name is Eunji Song.</h3>
+        <h3>I am a Software Engineer living in New York, NY</h3>
       </div>
 
 

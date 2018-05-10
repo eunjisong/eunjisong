@@ -1,13 +1,53 @@
-import React from 'react';
+import React, { Component } from "react";
 
-export default (props) => {
-  return (
-    <div>
+export default class About extends Component {
+  constructor() {
+    super();
 
-      <h2>About</h2>
-      <h3>Hello World!</h3>
-      <img src="https://avatars0.githubusercontent.com/u/32075932?s=400&u=4e8cb2bb8fcc0293dace5e9efeeb829db64a54a3&v=4" />
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-    </div>
-  )
+  handleSubmit(event) {
+    this.setState({});
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>About</h2>
+        <h3>Hello World!</h3>
+        <form className="inputContainer">
+
+          <div className="input">
+            <label>name:</label>
+            <br/>
+            <input type="text" name="name" />
+          </div>
+
+          <div className="input">
+            <label>email:</label>
+            <br/>
+            <input type="text" name="email" />
+          </div>
+
+          <div className="input">
+            <label>company:</label>
+            <br/>
+            <input type="text" name="company" />
+          </div>
+
+          <div className="input">
+            <label>message:</label>
+            <br/>
+            <textarea type="text" name="message"/>
+          </div>
+
+          <div className="input">
+          <button onSubmit={this.handleSubmit}>submit</button>
+          </div>
+
+        </form>
+      </div>
+    );
+  }
 }
