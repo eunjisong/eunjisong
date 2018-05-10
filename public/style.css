@@ -1,0 +1,28 @@
+body {
+  background: lavender
+}
+
+.item {
+  margin: 20px;
+  border: 10px solid black;
+  align-self: center;
+
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  align-self: center;
+  margin: 20px;
+
+}
